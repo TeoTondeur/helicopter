@@ -133,14 +133,14 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'collected_static')
 
 # LDAP connection
-server = Server('localhost', port=1389)
+server = Server('serveur.lycee.jb', port=389)
 connection = Connection(server)
 connection.bind()
 
 
 ############# for the LDAP AUTH BACKEND ########################
 # The URL of the LDAP server.
-LDAP_AUTH_URL = "ldap://localhost:1389"
+LDAP_AUTH_URL = "ldap://serveur.lycee.jb:389"
 
 # The LDAP search base for looking up users.
 LDAP_AUTH_SEARCH_BASE = "ou=Users,dc=lycee,dc=jb"

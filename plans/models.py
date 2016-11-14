@@ -43,7 +43,7 @@ class Plan(models.Model):
     trombones = models.IntegerField(
         verbose_name = "Nombre de trombones",
         default      = 1,
-        choices      = [(n,n) for n in range(1,4)],
+        choices      = [(n,n) for n in range(0,4)],
     )
     repli = models.BooleanField(
         verbose_name = "Repli en bout d'hélice",
@@ -511,7 +511,7 @@ class variationBB(models.Model):
     auteur   = models.ForeignKey(User)
     creation = models.DateTimeField(
         editable=False,
-        auto_now_add=True,
+        #~ auto_now_add=True,
         blank=True,
         verbose_name = "Date de création de la variation"
     )
